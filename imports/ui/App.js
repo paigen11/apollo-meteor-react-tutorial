@@ -3,12 +3,29 @@ import gql from 'graphql-tag'; // allows us to write graphql query in JS
 import { graphql } from 'react-apollo';
 
 // pass data from the server's index.js to the client
-const App = ({data}) => <h1>{data.hi}</h1>;
+const App = ({data}) => {
+    // this says if the data's still loading, return null, if it's done return the array of items
+    if(data.loading) return null;
+    return (
+        <div>
+            <h1>{data.hi}</h1>
+            <ul>
+                {data.resolutions.map(resolution => (
+                    <li key={resolution._id}>{resolution.name}</li>
+                ))}
+            </ul>
+        </div>
+    )
+};
 
 const hiQuery = gql`
-{
-  hi
-}
+    {
+      hi
+      resolutions {
+        _id
+        name
+      }
+    }
 `;
 
 // this connects the query to our app using the higher order component pattern
