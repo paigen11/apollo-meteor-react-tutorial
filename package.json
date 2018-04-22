@@ -5,9 +5,10 @@
     "start": "meteor run"
   },
   "dependencies": {
-    "@babel/runtime": "^7.0.0-beta.42",
+    "@babel/runtime": "^7.0.0-beta.44",
     "apollo-client": "^2.2.8",
     "apollo-client-preset": "^1.0.8",
+    "babel-runtime": "^6.26.0",
     "body-parser": "^1.18.2",
     "express": "^4.16.3",
     "graphql": "^0.13.2",

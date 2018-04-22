@@ -12,14 +12,13 @@ type Query {
 }
 `;
 
+//hi
+
 // defining the graphql function and what it returns, you can add schema files just by adding it to type defs
-const typeDefs = [
-    testSchema,
-    ResolutionsSchema
-];
+const typeDefs = [ testSchema, ResolutionsSchema ];
 
 // query itself
-const testResolver = {
+const testResolvers = {
     Query: {
         hi() {
             return "Hello world";
@@ -28,9 +27,7 @@ const testResolver = {
 };
 
 //combine the resolver and the resolution resolvers with the assistance of lodash
-const resolvers = merge(
-    testResolver, ResolutionsResolvers
-);
+const resolvers = merge( testResolvers, ResolutionsResolvers);
 
 // make executable schema requires both type defs and resolvers
 const schema = makeExecutableSchema({
