@@ -8,16 +8,16 @@ type Resolution {
 }
 
 #type DeleteResolution {
-#    name: String!
+#    name: String
 #}
 
 type Mutation {
     createResolution(
         name: String!)
         : Resolution
-#    deleteResolution(
-#        name: String!)
-#        : DeleteResolution
+    deleteResolution(
+        name: String!)
+        : Resolution
 }
 
 schema {
