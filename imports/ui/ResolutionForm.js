@@ -1,32 +1,72 @@
 import React, { Component } from 'react';
 import gql from 'graphql-tag';
-import { graphql } from 'react-apollo';
+import { compose, graphql } from 'react-apollo';
 
 const createResolution = gql`
-    mutation createResolution {
-        createResolution {
+    mutation createResolution($name: String!) {
+        createResolution(name: $name) {
             _id
         }
     }
 `;
 
+// const deleteResolution = gql`
+//   mutation deleteResolution($name: String!) {
+//     deleteResolution(name: $name) {
+//     }
+//   }
+// `;
+
 class ResolutionForm extends Component {
     submitForm = () => {
-        console.log(this.name.value);
-        this.props.createResolution();
+        // console.log(this.name.value);
+        this.props.createResolution({
+            variables: {
+                name: this.name.value
+            }
+        })
+            .then(({data}) => {
+                // this refetches the list after a new resolution has been created
+                this.props.refetch();
+            })
+            .catch(error => {
+                console.log(error);
+            });
     };
+
+    // deleteItem = () => {
+    //     this.props.deleteResolution({
+    //         variables: {
+    //             name: this.name.value
+    //         }
+    //     })
+    //         .then(({data}) => {
+    //             // this refetches the list after a new resolution has been created
+    //             this.props.refetch();
+    //         })
+    //         .catch(error => {
+    //             console.log(error);
+    //         });
+    // };
 
     render() {
         return (
             <div>
                 <input type="text" ref={input => (this.name = input)} />
                 <button onClick={this.submitForm}>Submit</button>
+                {/*<input type="text" ref={input => (this.name = input)} />*/}
+                {/*<button onClick={this.deleteItem}>Delete</button>*/}
             </div>
         )
     }
 }
 
 // export both the qgl query and the resolution form, you can update the name by doing so
-export default graphql(createResolution, {
-    name: "createResolution"
-})(ResolutionForm);
+export default compose (
+    graphql(createResolution, {
+        name: "createResolution"
+    }),
+    // graphql(deleteResolution, {
+    //     name: "deleteResolution"
+    // }),
+)(ResolutionForm);

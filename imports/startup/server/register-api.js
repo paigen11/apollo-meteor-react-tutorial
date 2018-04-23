@@ -12,7 +12,7 @@ type Query {
 }
 `;
 
-//hi
+//hello world
 
 // defining the graphql function and what it returns, you can add schema files just by adding it to type defs
 const typeDefs = [ testSchema, ResolutionsSchema ];

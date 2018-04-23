@@ -7,6 +7,20 @@ type Resolution {
     name: String!
 }
 
+#type DeleteResolution {
+#    name: String!
+#}
+
 type Mutation {
-    createResolution: Resolution
+    createResolution(
+        name: String!)
+        : Resolution
+#    deleteResolution(
+#        name: String!)
+#        : DeleteResolution
+}
+
+schema {
+  query: Query
+  mutation: Mutation
 }

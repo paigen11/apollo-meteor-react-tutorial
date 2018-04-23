@@ -21,11 +21,24 @@ export default {
     },
 
     Mutation: {
-        createResolution(){
-            console.log('got here');
-            // const resolutionId = Resolutions.insert({
-            // name: "Test res"
+        // destructure the args param by turning it into just the name with the { name }
+        createResolution(obj, { name }, context){
+            // console.log(name);
+            const resolutionId = Resolutions.insert({
+            // es6 way of creating an object
+            name
+            });
+            // create the object than go through the resolutions,
+            // find the one with the corresponding id and return it (graphql mutations expect returns)
+            return Resolutions.findOne(resolutionId);
+        },
+
+        deleteResolution(obj, args, context){
+            console.log(args);
+            // const resolutionId = Resolutions.delete({
+            //     console.log(args);
             // });
+            // return Resolutions.delete({ args });
         }
     }
 };
