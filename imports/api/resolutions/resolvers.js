@@ -31,14 +31,19 @@ export default {
             // create the object than go through the resolutions,
             // find the one with the corresponding id and return it (graphql mutations expect returns)
             return Resolutions.findOne(resolutionId);
-        },
-
-        deleteResolution(obj, args, context){
-            console.log(args);
-            // const resolutionId = Resolutions.delete({
-            //     console.log(args);
-            // });
-            // return Resolutions.delete({ args });
         }
+
+        // deleteResolution(obj, { name }, context){
+        //     console.log(name);
+        //     const resolutionIdToRemove = Resolutions.filter({
+        //         name
+        //     });
+        //     if(!name) {
+        //         throw new Error(`Couldn't find post ${name}`);
+        //     } else {
+        //         console.log('Resolution found')
+        //     }
+            // return Resolutions.delete( name );
+        // }
     }
 };

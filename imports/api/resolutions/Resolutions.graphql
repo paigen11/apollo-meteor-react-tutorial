@@ -15,9 +15,9 @@ type Mutation {
     createResolution(
         name: String!)
         : Resolution
-    deleteResolution(
-        name: String!)
-        : Resolution
+#    deleteResolution(
+#        name: String!)
+#        : Resolution
 }
 
 schema {

@@ -2,8 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="256414ba-0d7a-43df-a43d-073219b915c7" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/imports/api/resolutions/Resolutions.graphql" beforeDir="false" afterPath="$PROJECT_DIR$/imports/api/resolutions/Resolutions.graphql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/imports/startup/server/register-api.js" beforeDir="false" afterPath="$PROJECT_DIR$/imports/startup/server/register-api.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/imports/api/resolutions/resolvers.js" beforeDir="false" afterPath="$PROJECT_DIR$/imports/api/resolutions/resolvers.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/imports/ui/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/imports/ui/App.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/imports/ui/ResolutionForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/imports/ui/ResolutionForm.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -18,11 +20,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="App.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="App.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/imports/ui/App.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="42">
-              <caret line="5" column="16" selection-start-line="5" selection-start-column="16" selection-end-line="5" selection-end-column="16" />
+            <state relative-caret-position="380">
+              <caret line="31" column="149" selection-start-line="31" selection-start-column="149" selection-end-line="31" selection-end-column="149" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
                 <element signature="e#100#139#0" expanded="true" />
@@ -31,23 +33,38 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Resolutions.graphql" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/imports/api/resolutions/Resolutions.graphql">
+      <file leaf-file-name="init.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/server/init.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="9" lean-forward="true" selection-start-line="9" selection-start-column="1" selection-end-line="11" selection-end-column="2" />
+            <state>
+              <caret column="58" selection-start-column="58" selection-end-column="58" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ResolutionForm.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/imports/startup/server/index.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="15">
+              <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Resolutions.graphql" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/imports/api/resolutions/Resolutions.graphql">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="285">
+              <caret line="19" column="21" lean-forward="true" selection-start-line="19" selection-start-column="21" selection-end-line="19" selection-end-column="21" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ResolutionForm.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/imports/ui/ResolutionForm.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="203">
-              <caret line="15" column="12" selection-start-line="15" selection-start-column="12" selection-end-line="15" selection-end-column="12" />
-              <folding>
-                <element signature="e#0#26#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="-2">
+              <caret line="39" selection-start-line="39" selection-end-line="41" selection-end-column="18" />
             </state>
           </provider>
         </entry>
@@ -67,8 +84,8 @@
       <file leaf-file-name="resolvers.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/imports/api/resolutions/resolvers.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="359">
-              <caret line="41" column="9" lean-forward="true" selection-start-line="41" selection-start-column="9" selection-end-line="41" selection-end-column="9" />
+            <state relative-caret-position="178">
+              <caret line="33" column="9" lean-forward="true" selection-start-line="33" selection-start-column="9" selection-end-line="33" selection-end-column="9" />
             </state>
           </provider>
         </entry>
@@ -101,11 +118,11 @@
         <option value="$PROJECT_DIR$/imports/startup/server/index.js" />
         <option value="$PROJECT_DIR$/imports/api/resolutions/resolutions.js" />
         <option value="$PROJECT_DIR$/package.json" />
-        <option value="$PROJECT_DIR$/imports/ui/App.js" />
-        <option value="$PROJECT_DIR$/imports/api/resolutions/resolvers.js" />
-        <option value="$PROJECT_DIR$/imports/api/resolutions/Resolutions.graphql" />
         <option value="$PROJECT_DIR$/imports/startup/server/register-api.js" />
+        <option value="$PROJECT_DIR$/imports/api/resolutions/Resolutions.graphql" />
+        <option value="$PROJECT_DIR$/imports/api/resolutions/resolvers.js" />
         <option value="$PROJECT_DIR$/imports/ui/ResolutionForm.js" />
+        <option value="$PROJECT_DIR$/imports/ui/App.js" />
       </list>
     </option>
   </component>
@@ -128,9 +145,9 @@
     <handled-path value="$PROJECT_DIR$/node_modules" />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="840" />
+    <option name="x" value="667" />
     <option name="y" value="23" />
-    <option name="width" value="840" />
+    <option name="width" value="1013" />
     <option name="height" value="947" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
@@ -208,6 +225,11 @@
               <item name="imports" type="462c0819:PsiDirectoryNode" />
               <item name="ui" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="apollo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="apollo" type="462c0819:PsiDirectoryNode" />
+              <item name="server" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -258,28 +280,29 @@
       <option name="presentableId" value="Default" />
       <updated>1523479879515</updated>
       <workItem from="1523479881132" duration="6440000" />
-      <workItem from="1524006283744" duration="15001000" />
+      <workItem from="1524006283744" duration="16330000" />
+      <workItem from="1525293640521" duration="598000" />
+      <workItem from="1525872059384" duration="2609000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="21441000" />
+    <option name="totallyTimeSpent" value="25977000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="840" y="23" width="840" height="947" extended-state="0" />
+    <frame x="667" y="23" width="1013" height="947" extended-state="0" />
     <editor active="true" />
     <layout>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.22076613" />
       <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="GraphQL" order="8" weight="0.32889965" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
-      <window_info anchor="bottom" id="GraphQL" weight="0.32889965" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.32889965" />
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info id="npm" order="2" side_tool="true" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="7" visible="true" weight="0.32889965" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.26739928" />
-      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Find" order="1" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="Terminal" order="7" visible="true" weight="0.32889965" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -288,6 +311,7 @@
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Find" order="1" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -300,7 +324,7 @@
     <entry file="file://$PROJECT_DIR$/imports/ui/App.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="45">
-          <caret line="4" column="53" selection-start-line="4" selection-start-column="53" selection-end-line="4" selection-end-column="53" />
+          <caret line="5" column="16" selection-start-line="5" selection-start-column="16" selection-end-line="5" selection-end-column="16" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
             <element signature="e#100#139#0" expanded="true" />
@@ -308,10 +332,87 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/imports/startup/server/index.js">
+    <entry file="file://$PROJECT_DIR$/imports/api/resolutions/Resolutions.graphql">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="26" column="21" selection-start-line="26" selection-start-column="21" selection-end-line="26" selection-end-column="21" />
+        <state relative-caret-position="135">
+          <caret line="9" selection-start-line="9" selection-start-column="1" selection-end-line="11" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/imports/ui/ResolutionForm.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="15" column="12" selection-start-line="15" selection-start-column="12" selection-end-line="15" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/imports/startup/server/register-api.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="14" column="10" selection-start-line="14" selection-start-column="10" selection-end-line="14" selection-end-column="10" />
+          <folding>
+            <element signature="e#0#51#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/imports/api/resolutions/resolvers.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="540">
+          <caret line="36" column="30" lean-forward="true" selection-start-line="36" selection-start-column="30" selection-end-line="36" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/imports/ui/App.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="5" column="16" selection-start-line="5" selection-start-column="16" selection-end-line="5" selection-end-column="16" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+            <element signature="e#100#139#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/imports/api/resolutions/Resolutions.graphql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" lean-forward="true" selection-start-line="9" selection-start-column="1" selection-end-line="11" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/imports/ui/ResolutionForm.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="15" column="12" selection-start-line="15" selection-start-column="12" selection-end-line="15" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/imports/startup/server/register-api.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="14" column="10" selection-start-line="14" selection-start-column="10" selection-end-line="14" selection-end-column="10" />
+          <folding>
+            <element signature="e#0#51#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/imports/api/resolutions/resolvers.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="540">
+          <caret line="36" column="30" lean-forward="true" selection-start-line="36" selection-start-column="30" selection-end-line="36" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/imports/ui/App.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="4" column="53" selection-start-line="4" selection-start-column="53" selection-end-line="4" selection-end-column="53" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+            <element signature="e#100#139#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -363,20 +464,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/imports/startup/server/index.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/client/init.js">
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <caret column="95" selection-start-column="95" selection-end-column="95" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server/init.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="58" selection-start-column="58" selection-end-column="58" />
         </state>
       </provider>
     </entry>
@@ -417,26 +508,29 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/imports/api/resolutions/resolvers.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="359">
-          <caret line="41" column="9" lean-forward="true" selection-start-line="41" selection-start-column="9" selection-end-line="41" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/imports/ui/App.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="42">
-          <caret line="5" column="16" selection-start-line="5" selection-start-column="16" selection-end-line="5" selection-end-column="16" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-            <element signature="e#100#139#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="178">
+          <caret line="33" column="9" lean-forward="true" selection-start-line="33" selection-start-column="9" selection-end-line="33" selection-end-column="9" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/imports/api/resolutions/Resolutions.graphql">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" lean-forward="true" selection-start-line="9" selection-start-column="1" selection-end-line="11" selection-end-column="2" />
+        <state relative-caret-position="285">
+          <caret line="19" column="21" lean-forward="true" selection-start-line="19" selection-start-column="21" selection-end-line="19" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/init.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="58" selection-start-column="58" selection-end-column="58" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/imports/startup/server/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
         </state>
       </provider>
     </entry>
@@ -452,10 +546,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/imports/ui/ResolutionForm.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="203">
-          <caret line="15" column="12" selection-start-line="15" selection-start-column="12" selection-end-line="15" selection-end-column="12" />
+        <state relative-caret-position="-2">
+          <caret line="39" selection-start-line="39" selection-end-line="41" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/imports/ui/App.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="380">
+          <caret line="31" column="149" selection-start-line="31" selection-start-column="149" selection-end-line="31" selection-end-column="149" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
+            <element signature="e#100#139#0" expanded="true" />
           </folding>
         </state>
       </provider>

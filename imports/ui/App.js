@@ -4,15 +4,14 @@ import { graphql } from 'react-apollo';
 import ResolutionForm from './ResolutionForm';
 
 // pass data from the server's index.js to the client
-const App = ({ data }) => {
+const App = ({ loading, resolutions }) => {
     // this says if the data's still loading, return null, if it's done return the array of items
-    if(data.loading) return null;
+    if(loading) return null;
     return (
         <div>
-            <h1>{data.hi}</h1>
-            <ResolutionForm refetch={data.refetch} />
+            <ResolutionForm />
             <ul>
-                {data.resolutions.map(resolution => (
+                {resolutions.map(resolution => (
                     <li key={resolution._id}>{resolution.name}</li>
                 ))}
             </ul>
@@ -20,8 +19,8 @@ const App = ({ data }) => {
     );
 };
 
-const hiQuery = gql`
-    {
+const resolutionsQuery = gql`
+    query Resolutions {
       hi
       resolutions {
         _id
@@ -30,5 +29,7 @@ const hiQuery = gql`
     }
 `;
 
-// this connects the query to our app using the higher order component pattern
-export default graphql(hiQuery)(App);
+// this connects the query to our app using the higher order component pattern, spread the data using props and make the data being passed in cleaner
+export default graphql(resolutionsQuery, {
+    props: ({data}) => ({ ...data })
+})(App);

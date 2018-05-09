@@ -10,13 +10,13 @@ const createResolution = gql`
     }
 `;
 
-const deleteResolution = gql`
-  mutation deleteResolution($name: String!) {
-    deleteResolution(name: $name) {
-        name
-    }
-  }
-`;
+// const deleteResolution = gql`
+//   mutation deleteResolution($name: String!) {
+//     deleteResolution(name: $name) {
+//         name
+//     }
+//   }
+// `;
 
 class ResolutionForm extends Component {
     submitForm = () => {
@@ -26,37 +26,29 @@ class ResolutionForm extends Component {
                 name: this.name.value
             }
         })
-            .then(({data}) => {
-                // this refetches the list after a new resolution has been created
-                this.props.refetch();
-            })
-            .catch(error => {
-                console.log(error);
-            });
+        .catch(error => {
+            console.log(error);
+        });
     };
 
-    deleteItem = () => {
-        this.props.deleteResolution({
-            variables: {
-                name: this.name.value
-            }
-        })
-            .then(({data}) => {
-                // this refetches the list after a new resolution has been created
-                this.props.refetch();
-            })
-            .catch(error => {
-                console.log(error);
-            });
-    };
+    // deleteItem = () => {
+    //     this.props.deleteResolution({
+    //         variables: {
+    //             name: this.name.value
+    //         }
+    //     })
+    //         .catch(error => {
+    //             console.log(error);
+    //         });
+    // };
 
     render() {
         return (
             <div>
                 <input type="text" ref={input => (this.name = input)} />
                 <button onClick={this.submitForm}>Submit</button>
-                <input type="text" ref={input => (this.name = input)} />
-                <button onClick={this.deleteItem}>Delete</button>
+                {/*<input type="text" ref={input => (this.name = input)} />*/}
+                {/*<button onClick={this.deleteItem}>Delete</button>*/}
             </div>
         )
     }
@@ -65,9 +57,12 @@ class ResolutionForm extends Component {
 // export both the qgl query and the resolution form, you can update the name by doing so
 export default compose (
     graphql(createResolution, {
-        name: "createResolution"
-    }),
-    graphql(deleteResolution, {
-        name: "deleteResolution"
-    }),
+        name: "createResolution",
+        options: {
+            refetchQueries: ['Resolutions']
+        }
+    })
+    // graphql(deleteResolution, {
+    //     name: "deleteResolution"
+    // }),
 )(ResolutionForm);
