@@ -15,8 +15,10 @@ import Resolutions from './resolutions';
 // query itself, the schema for graphql doesn't need to perfectly mirror the data being passed in
 export default {
     Query: {
-        resolutions() {
-            return Resolutions.find({}).fetch();
+        resolutions(obj, args, {userId}) {
+            return Resolutions.find({
+                userId
+            }).fetch();
         }
     },
 

@@ -2,6 +2,7 @@ import React from 'react';
 import { Meteor } from 'meteor/meteor';
 import { render } from 'react-dom';
 import { ApolloProvider } from 'react-apollo';
+import { ApolloLink, from } from 'apollo-link';
 import { ApolloClient } from 'apollo-client';
 import { HttpLink } from 'apollo-link-http';
 import { InMemoryCache } from 'apollo-cache-inmemory';
@@ -13,12 +14,24 @@ const httpLink = new HttpLink({
     uri: Meteor.absoluteUrl('graphql')
 });
 
+// set up an authorization link for loggin in to Apollo
+const authLink = new ApolloLink((operation, forward) => {
+   const token = Accounts._storedLoginToken();
+   // stores token in our headers meteor login token
+   operation.setContext(() => ({
+     headers: {
+         'meteor-login-token': token,
+     }
+   }));
+    return forward(operation);
+});
+
 // create in memory cache
 const cache = new InMemoryCache();
 
-// create client that takes in link and cache
+// create client that takes in link, authlink and cache
 const client = new ApolloClient({
-    link: httpLink,
+    link: from([authLink, httpLink]),
     cache
 });
 
