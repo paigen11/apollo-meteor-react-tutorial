@@ -8,20 +8,25 @@ import { withApollo } from 'react-apollo'; // this is used to resetStore, which 
 
 
 // pass data from the server's index.js to the client
-const App = ({ loading, resolutions, client }) => {
+const App = ({ loading, resolutions, client, user }) => {
     // this says if the data's still loading, return null, if it's done return the array of items
     if(loading) return null;
     return (
         <div>
-            <button onClick={() => {
-                Meteor.logout();
-                client.resetStore();
-            }}
-            >
+            { user._id ? (
+                <button onClick={() => {
+                    Meteor.logout();
+                    client.resetStore();
+                }}
+                >
                 Logout
-            </button>
-            <RegisterForm client={client} />
-            <LoginForm client={client} />
+                </button>
+            ) : (
+                <div>
+                    <RegisterForm client={client} />
+                    <LoginForm client={client} />
+                </div>
+                    )}
             <ResolutionForm />
             <ul>
                 {resolutions.map(resolution => (
@@ -34,12 +39,14 @@ const App = ({ loading, resolutions, client }) => {
 
 const resolutionsQuery = gql`
     query Resolutions {
-      hi
       resolutions {
         _id
         name
       }
+    user {
+        _id
     }
+  }
 `;
 
 // this connects the query to our app using the higher order component pattern, spread the data using props and make the data being passed in cleaner

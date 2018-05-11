@@ -4,18 +4,25 @@ import merge from 'lodash/merge';
 
 import ResolutionsSchema from '../../api/resolutions/Resolutions.graphql';
 import ResolutionsResolvers from '../../api/resolutions/resolvers';
+import UsersSchema from '../../api/users/User.graphql';
+import UsersResolvers from '../../api/users/resolvers';
 
 const testSchema = `
 type Query {
   hi: String
   resolutions: [Resolution]
+  user: User
 }
 `;
 
-//pls work
+//hi
 
 // defining the graphql function and what it returns, you can add schema files just by adding it to type defs
-const typeDefs = [ testSchema, ResolutionsSchema ];
+const typeDefs = [
+    testSchema,
+    ResolutionsSchema,
+    UsersSchema
+];
 
 // query itself
 const testResolvers = {
@@ -27,7 +34,7 @@ const testResolvers = {
 };
 
 //combine the resolver and the resolution resolvers with the assistance of lodash
-const resolvers = merge( testResolvers, ResolutionsResolvers);
+const resolvers = merge( testResolvers, ResolutionsResolvers, UsersResolvers);
 
 // make executable schema requires both type defs and resolvers
 const schema = makeExecutableSchema({
