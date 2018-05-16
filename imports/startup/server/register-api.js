@@ -6,35 +6,22 @@ import ResolutionsSchema from '../../api/resolutions/Resolutions.graphql';
 import ResolutionsResolvers from '../../api/resolutions/resolvers';
 import UsersSchema from '../../api/users/User.graphql';
 import UsersResolvers from '../../api/users/resolvers';
+import GoalsSchema from '../../api/goals/Goals.graphql';
+import GoalsResolvers from '../../api/goals/resolvers';
 
-const testSchema = `
-type Query {
-  hi: String
-  resolutions: [Resolution]
-  user: User
-}
-`;
 
-//hi
+
+//hidey ho
 
 // defining the graphql function and what it returns, you can add schema files just by adding it to type defs
 const typeDefs = [
-    testSchema,
+    GoalsSchema,
     ResolutionsSchema,
     UsersSchema
 ];
 
-// query itself
-const testResolvers = {
-    Query: {
-        hi() {
-            return "Hello world";
-        }
-    }
-};
-
 //combine the resolver and the resolution resolvers with the assistance of lodash
-const resolvers = merge( testResolvers, ResolutionsResolvers, UsersResolvers);
+const resolvers = merge( GoalsResolvers, ResolutionsResolvers, UsersResolvers);
 
 // make executable schema requires both type defs and resolvers
 const schema = makeExecutableSchema({
