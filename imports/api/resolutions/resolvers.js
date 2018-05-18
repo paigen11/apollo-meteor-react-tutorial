@@ -1,4 +1,5 @@
 import Resolutions from './resolutions';
+import Goals from '../goals/goals';
 
 // no id is needed, mongodb and meteor will automatically assign one
 // Resolutions.insert({
@@ -19,6 +20,15 @@ export default {
             return Resolutions.find({
                 userId
             }).fetch();
+        }
+    },
+
+    // type needs to be type of the schema, even for goals
+    Resolution: {
+        goals: (resolution) => {
+           return Goals.find({
+                resolutionId: resolution._id
+            }).fetch()
         }
     },
 

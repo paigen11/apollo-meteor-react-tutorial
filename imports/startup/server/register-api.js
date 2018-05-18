@@ -11,7 +11,7 @@ import GoalsResolvers from '../../api/goals/resolvers';
 
 
 
-//hidey ho
+//hidey hidey hidey hidey ho
 
 // defining the graphql function and what it returns, you can add schema files just by adding it to type defs
 const typeDefs = [
