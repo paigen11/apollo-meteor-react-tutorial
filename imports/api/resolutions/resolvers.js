@@ -25,10 +25,18 @@ export default {
 
     // type needs to be type of the schema, even for goals
     Resolution: {
-        goals: (resolution) => {
-           return Goals.find({
+        goals: (resolution) =>
+            Goals.find({
                 resolutionId: resolution._id
-            }).fetch()
+            }).fetch(),
+        completed: resolution => {
+            const goals = Goals.find({
+                resolutionId: resolution._id,
+            }).fetch();
+            // if there's nothing in the array itself, this will be false (not completed);
+            if(goals.length === 0) return false;
+            const completedGoals = goals.filter(goal => goal.completed);
+            return goals.length === completedGoals.length;
         }
     },
 

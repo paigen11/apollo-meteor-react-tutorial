@@ -7,6 +7,7 @@ type Resolution {
     name: String!
     # this is a relational data schema now by referencing goals from the Goal schema
     goals: [Goal]
+    completed: Boolean
 }
 
 type Query {

@@ -5,6 +5,7 @@ import ResolutionForm from './ResolutionForm';
 import RegisterForm from './RegisterForm';
 import LoginForm from './LoginForm';
 import GoalForm from './GoalForm';
+import Goal from './resolutions/Goal';
 import { withApollo } from 'react-apollo'; // this is used to resetStore, which will refetch our data when people log in or out
 
 
@@ -32,7 +33,16 @@ const App = ({ loading, resolutions, client, user }) => {
             <ul>
                 {resolutions.map(resolution => (
                     <li key={resolution._id}>
-                        {resolution.name}
+                        <span style={{
+                            textDecoration: resolution.completed ? 'line-through': 'none'
+                        }}>
+                            {resolution.name}
+                        </span>
+                        <ul>
+                            {resolution.goals.map(goal => (
+                                <Goal goal={goal} key={goal._id} />
+                            ))}
+                        </ul>
                         <GoalForm resolutionId={resolution._id} />
                     </li>
                 ))}
@@ -46,6 +56,12 @@ const resolutionsQuery = gql`
       resolutions {
         _id
         name
+        completed
+        goals {
+            name
+            _id
+            completed
+        }
       }
     user {
         _id

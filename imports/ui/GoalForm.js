@@ -18,7 +18,9 @@ class GoalForm extends Component {
                 name: this.name.value,
                 resolutionId: this.props.resolutionId
             }
-        })
+        }).then(() =>{
+            this.name.value = "";
+            })
             .catch(error => {
                 console.log(error);
             });
@@ -36,6 +38,9 @@ class GoalForm extends Component {
 
 export default compose (
     graphql(createGoal, {
-        name: "createGoal"
+        name: "createGoal",
+        options: {
+            refetchQueries: ['Resolutions']
+        }
     })
 )(GoalForm);
