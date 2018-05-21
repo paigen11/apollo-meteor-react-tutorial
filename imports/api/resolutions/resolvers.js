@@ -44,14 +44,18 @@ export default {
         // destructure the args param by turning it into just the name with the { name }
         createResolution(obj, { name }, { userId }){
             // console.log(name);
-            const resolutionId = Resolutions.insert({
-            // es6 way of creating an object
-            name,
-            userId
-            });
-            // create the object than go through the resolutions,
-            // find the one with the corresponding id and return it (graphql mutations expect returns)
-            return Resolutions.findOne(resolutionId);
+            if(userId){
+
+                const resolutionId = Resolutions.insert({
+                    // es6 way of creating an object
+                    name,
+                    userId
+                });
+                // create the object than go through the resolutions,
+                // find the one with the corresponding id and return it (graphql mutations expect returns)
+                return Resolutions.findOne(resolutionId);
+            }
+            throw new Error('Unauthorized');
         }
 
         // deleteResolution(obj, { name }, context){
